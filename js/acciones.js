@@ -1,5 +1,3 @@
-// JavaScript Document
-
 $(document).ready(function(e) {
     document.addEventListener("deviceready", onDeviceReady,false);
 	
@@ -23,7 +21,7 @@ $(document).ready(function(e) {
 			}
 			
 			var watchID = navigator.geolocation.getCurrentPosition(onSucces,onError,options);
-			function onSucess(position) {
+			function onSucess(position){
 				
 				alert('Latitude:'		+position.coords.latitude		+'\n'+
 				'Longitude:'		+position.coords.longitude		+'\n'+
@@ -47,7 +45,7 @@ $(document).ready(function(e) {
 		}
 		
 		var watchID=navigator.geolocation.watchPosition(onSucess,onError,options);
-		function onSucess(position){	
+		function onSuccess(position){	
 		$('#latitud').html(position.latitude);
 		$('#longitud').html(position.longitude);
 		$('#altitud').html(position.altitude);
